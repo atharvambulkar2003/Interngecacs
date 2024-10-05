@@ -1,0 +1,27 @@
+<%-layout("/layouts/boilerplate")%>
+<body>
+    <h2 class="heading">All Intern</h2>
+    <div class="allListings">
+        <%for(let listing of listings){%>
+            <a href="/listings/<%=listing._id%>" class="listLink">
+                <div class="card index-card">
+                        <img src="<%=listing.img%>" class="card-img-top index-img" alt="...">
+                        <div class="card-body">
+                            <p class="card-text card-text-index">
+                                <b><u> Company</u>:</b> <%=listing.companyName%> <br><br>
+                                <b><u>Requirements</u></u>:</b> <%=listing.requirements%> <br><br>
+                                <b><u>Deadline</u>:</b> <%=listing.deadline%>
+                            </p>
+                        </div>
+                        <button type="button" class="btn btn-light">Show more</button>
+                </div>
+            </a>
+        <%}%>
+    </div>
+    <!-- <ul>
+        <%for(let listing of listings){%>
+            <li><a href="/listings/<%=listing._id%>"><%=listing.companyName%></a></li>
+        <%}%>
+        
+    </ul> -->
+</body>

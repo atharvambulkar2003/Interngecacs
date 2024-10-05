@@ -1,0 +1,99 @@
+<%-layout("/layouts/boilerplate")%>
+
+<body>
+    <div class="row">
+        <div class="col-8 offset-2">
+            <h2 class="mt-3">Add Your Company</h2>
+            <form action="/listings"method="post"class="needs-validation"novalidate>
+                <div class="mt-3">
+                    <label for="name"class="form-label">Enter Company Name</label>
+                    <input type="text"name="listings[companyName]"placeholder="xyz"class="form-control"id="name"required>
+                    <div class="valid-feedback">
+                        Looks good
+                    </div>
+                    <div class="invalid-feedback">
+                        please enter company name
+                    </div>
+                </div>
+                <div class="mt-3">
+                    <label for="desc"class="form-label">Enter Description</label>
+                    <textarea name="listings[desc]"placeholder="tell about your company"class="form-control"id="desc"required></textarea>
+                    <div class="invalid-feedback">
+                        Please enter description
+                    </div>
+                </div>
+                <div class="mt-3">
+                    <label for="img"class="form-label">Enter image url</label>
+                    <input type="text"name="listings[img]"placeholder="Enter url"class="form-control"id="img"required>
+            
+                    <div class="invalid-feedback">
+                        please select image
+                    </div>
+                </div>
+                <div class="mt-3">
+                    <label for="role"class="form-label">Enter role</label>
+                    <input type="text"name="listings[role]"placeholder="software engineer"class="form-control"id="role"required>
+                    
+                    <div class="invalid-feedback">
+                        please enter role
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="mt-3 col-md-6">
+                        <label for="loc"class="form-label">Enter locations</label>
+                        <input type="text"name="listings[location]"placeholder="Mumbai,Pune"class="form-control"id="loc"required>
+                        
+                        <div class="invalid-feedback">
+                            please enter locations
+                        </div>
+                    </div>
+                    <div class="mt-3 col-md-6">
+                        <label for="dur"class="form-label">Enter duration</label>
+                        <input type="text"name="listings[duration]"placeholder="3 months"class="form-control"id="dur"required>
+                        
+                        <div class="invalid-feedback">
+                            please enter duration
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="mt-3 col-md-6">
+                        <label for="sti"class="form-label">Enter stipend</label>
+                        <input type="text"name="listings[stipend]"placeholder="30,000"class="form-control"id="sti"required>
+                        
+                    <div class="invalid-feedback">
+                        please enter stipend
+                    </div>
+                    </div>
+                    <div class="mt-3 col-md-6">
+                        <label for="dead"class="form-label">Enter deadline</label>
+                        <input type="text"name="listings[deadline]"placeholder="23-09-24"class="form-control"id="dead"required>
+                       
+                    <div class="invalid-feedback">
+                        please enter deadline
+                    </div>
+                    </div>
+                </div>
+                <div class="mt-3">
+                    <label for="req"class="form-label">Enter requirements</label>
+                    <input type="text"name="listings[requirements]"placeholder="full stack java developer"class="form-control"id="req"required>
+                    
+                    <div class="invalid-feedback">
+                        please enter requirements
+                    </div>
+                </div>
+                <div class="mt-3">
+                    <label for="email"class="form-label">Enter email</label>
+                    <input type="text"name="listings[contactEmail]"placeholder="xyz@gmail.com"class="form-control"id="email"required>
+                    
+                    <div class="invalid-feedback">
+                        please enter email
+                    </div>
+                </div>
+                <div class="mt-3 mb-3">
+                    <button class="btn btn-dark add-btn">Add</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>

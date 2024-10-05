@@ -1,0 +1,86 @@
+<%-layout("/layouts/boilerplate")%>
+<body>
+    <div class="row">
+        <div class="col-8 offset-2">
+            <form action="/listings/<%=listing._id%>?_method=PUT"method="post"novalidate class="needs-validation">
+                <div class="mt-3">
+                    <label for="name"class="form-label">Enter Company Name</label>
+                    <input class="form-control"type="text"name="listings[companyName]"value="<%=listing.companyName%>"required>
+                    <div class="invalid-feedback">
+                        please enter name
+                    </div>
+                </div>
+                <div class="mt-3">
+                    <label for="desc"class="form-label">Enter Description</label>
+                    <textarea class="form-control" name="listings[desc]" id=""required><%=listing.desc%></textarea>
+                    <div class="invalid-feedback">
+                        please enter description
+                    </div>
+                </div>
+                <div class="mt-3">
+                    <label for="img"class="form-label">Enter image url</label>
+                    <input class="form-control"type="text"name="listings[img]"value="<%=listing.img%>"required>
+                    <div class="invalid-feedback">
+                        please select image
+                    </div>
+                </div>
+                <div class="mt-3">
+                    <label for="role"class="form-label">Enter role</label>
+                    <input class="form-control"type="text"name="listings[role]"value="<%=listing.role%>"required>
+                    <div class="invalid-feedback">
+                        please enter role
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="mt-3 col-6">
+                        <label for="loc"class="form-label">Enter locations</label>
+                        <input class="form-control"type="text"name="listings[location]"value="<%=listing.location%>"required>
+                        <div class="invalid-feedback">
+                            please enter locations
+                        </div>
+                    </div>
+                    <div class="mt-3 col-6">
+                        <label for="dur"class="form-label">Enter duration</label>
+                        <input class="form-control"type="text"name="listings[duration]"value="<%=listing.duration%>"required>
+                        <div class="invalid-feedback">
+                            please enter duration
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="mt-3 col-6">
+                        <label for="sti"class="form-label">Enter stipend</label>
+                        <input class="form-control"type="text"name="listings[stipend]"value="<%=listing.stipend%>"required>
+                        <div class="invalid-feedback">
+                            please enter valid stipend
+                        </div>
+                    </div>
+                    <div class="mt-3 col-6">
+                        <label for="dead"class="form-label">Enter deadline</label>
+                        <input class="form-control"type="text"name="listings[deadline]"value="<%=listing.deadline%>"required>
+                        <div class="invalid-feedback">
+                            please enter deadline
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-3">
+                    <label for="req"class="form-label">Enter requirements</label>
+                    <input class="form-control"type="text"name="listings[requirements]"value="<%=listing.requirements%>"required>
+                    <div class="invalid-feedback">
+                        please enter requirements
+                    </div>
+                </div>
+                <div class="mt-3">
+                    <label for="email"class="form-label">Enter email</label>
+                    <input class="form-control"type="text"name="listings[contactEmail]"value="<%=listing.contactEmail%>"required>
+                    <div class="invalid-feedback">
+                        please enter email
+                    </div>
+                </div>
+                <div class="mt-3 mb-3">
+                    <button class="btn btn-dark add-btn">Update</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
