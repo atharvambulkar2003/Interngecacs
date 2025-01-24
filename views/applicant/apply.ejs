@@ -1,0 +1,38 @@
+<%-layout("/layouts/boilerplate")%>
+<body>
+    <div class="row">
+        <div class="col-6 offset-3">
+            <form action="/listings/<%=id%>/applicant"method="post"class="needs-validation"novalidate>
+                <div class="mt-3">
+                    <label for="applicantName"class="form-label">Enter Name</label>
+                    <input type="text"name="applicant[applicantName]"placeholder="xyz"class="form-control"id="applicantName"required>
+                    <div class="invalid-feedback">
+                        please enter name
+                    </div>
+                </div>
+                <div class="mt-3">
+                    <label for="applicantEmail"class="form-label">Enter Email</label>
+                    <input type="text"name="applicant[applicantEmail]"placeholder="xyz@gmail.com"class="form-control"id="applicantEmail"required>
+                    <div class="invalid-feedback">
+                        please enter email
+                    </div>
+                </div>
+                <div class="mt-3">
+                    <label for="applicantResume"class="form-label">Provide Resume Link</label>
+                    <input type="text"name="applicant[resume]"placeholder=""class="form-control"id="applicantResume"required>
+                    <div class="invalid-feedback">
+                        please provide valid link
+                    </div>
+                </div>
+                <div class="mt-3">
+                    <label for="appliedDate"class="form-label">Enter Todays Date</label>
+                    <input type="date"name="applicant[dateApplied]"class="form-control"id="appliedDate"required>
+                    <div class="invalid-feedback">
+                        please enter Date
+                    </div>
+                </div>
+                <button class="btn btn-success mt-3 mb-3">Submit</button>
+            </form>
+        </div>
+    </div>
+</body>

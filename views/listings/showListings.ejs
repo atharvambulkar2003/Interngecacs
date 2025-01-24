@@ -1,0 +1,15 @@
+<%-layout("/layouts/boilerplate")%>
+<body>
+        <div class="showInternship">
+            <%for(list of applicants){%>
+                <div class="card internShowCard" style="width: 18rem;">
+                    <div class="card-body">
+                        <h5 class="card-title"> <b>Name : </b><%=list.applicantName%></h5>
+                        <p class="card-text"><b>Email : </b><%=list.applicantEmail%></p>
+                        <p class="card-text"><b>Applied Date : </b><%=list.dateApplied%></p>
+                        <a href="<%=list.resume%>" class="btn btn-primary">See Resume</a>
+                    </div>
+                  </div>
+            <%}%>
+        </div>
+</body>

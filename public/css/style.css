@@ -112,6 +112,27 @@ body{
 .heading-title{
     margin-left:15px;
 }
+.showInternship{
+    display: flex !important;
+    flex-wrap: wrap !important;
+    margin:5px;
+}
+.internShowCard{
+    margin:5px;
+    border: 2px solid black !important;
+}
+.experienceCard{
+    border:0.5px solid black !important;
+    margin-bottom: 5px;
+    margin-right: 5px;
+}
+.seeApplicant{
+    margin-left:20px;
+}
+.logoGe{
+    height:200px;
+    width:200px;
+}
 @media(max-width:450px){
     .show-img{
         height: 100px !important;
@@ -119,5 +140,8 @@ body{
     }
     .delete-btn{
         margin-left:2rem !important;
+    }
+    .seeApplicant{
+        margin-left: 50px;
     }
 }

@@ -15,17 +15,61 @@
                     <b>deadline:</b> <%=listing.deadline%><br>
                     <b>requirements:</b> <%=listing.requirements%><br>
                     <b>contact at:</b> <%=listing.contactEmail%><br>
-                    <div class="row mt-3 mb-3">
-                        <form action="/listings/<%=listing._id%>/edit"method="get"class="col-1 edit-btn">
-                            <button class="btn btn-dark">Edit</button>
-                        </form>
-                        <form action="/listings/<%=listing._id%>?_method=delete"method="post"class="col-1 delete-btn">
-                            <button class="btn btn-dark">Delete</button>
-                        </form>
-                    </div>
-                    <button class="btn btn-dark"><a href=""class="applyLink">Apply now</a></button>
-                    <button class="btn btn-dark"><a href=""class="applyLink">visit now</a></button>
+                    <%if(userInfo && userInfo._id.equals(listing.owner._id)){%>
+                        <div class="row mt-3 mb-3">
+                                <form action="/listings/<%=listing._id%>/edit"method="get"class="col-1 edit-btn">
+                                    <button class="btn btn-success">Edit</button>
+                                </form>
+                                <form action="/listings/<%=listing._id%>?_method=delete"method="post"class="col-1 delete-btn">
+                                    <button class="btn btn-danger">Delete</button>
+                                </form>
+                                <form action="/listings/<%=listing._id%>/show"method="get"class="col-3 seeApplicant">
+                                    <button class="btn btn-info applicantBtn">Applicants</button>
+                                </form>
+                        </div>
+                    <%}%>
+                    <%if(!(userInfo && userInfo._id.equals(listing.owner._id))){%>
+                        <button class="btn btn-dark"><a href="/listings/<%=listing._id%>/applicant"class="applyLink mt-3">Apply now</a></button>
+                        <button class="btn btn-dark"><a href=""class="applyLink mt-3">visit now</a></button>
+                    <%}%>
+
                   </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-8 offset-2">
+            <hr>
+            <h4>Leave an Experience</h4>
+            <form action="/listings/<%=listing._id%>/experience"method="POST"class="needs-validation"novalidate>
+                <div>
+                    <label for="Comment"class="form-label">comments</label>
+                    <textarea name="Experience[comment]" id="comment"cols="30"rows="5"class="form-control"required></textarea>
+                    <div class="invalid-feedback">
+                        please share your experience
+                    </div>
+                </div>
+                <div class="mt-3 mb-3">
+                    <button class="btn btn-outline-success">Submit</button>
+                </div>
+            </form>
+            <hr>
+            <div>
+                <h4 class="mb-3"> <u> All Experiences</u></h4>
+                <div class="row experience-card">
+                    <%for(experience of listing.experience){%>
+                        <div class="card experienceCard col-5">
+                            <div class="card-body">
+                                <h5 class="card-title"><%=experience.author.username%></h5>
+                                <p class="card-text"><%=experience.comment%></p>
+                                <p class="card-text"><%=experience.createdAt%></p>
+                                <%if(userInfo && experience.author._id.equals(userInfo._id)){%>
+                                    <form action="/listings/<%=listing._id%>/experience/<%=experience._id%>?_method=delete"method="post">
+                                        <button class="btn btn-outline-danger">Delete</button>
+                                    </form>
+                                <%}%>
+                            </div>
+                        </div>
+                    <%}%>
                 </div>
             </div>
         </div>

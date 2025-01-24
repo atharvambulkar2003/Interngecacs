@@ -9,7 +9,8 @@ let sampleData=[
       stipend: 10000,
       deadline:"2024-09-29",
       requirements: "Proficiency in JavaScript and React",
-      contactEmail: "hr@techinnovators.com"
+      contactEmail: "hr@techinnovators.com",
+      owner:'670744d5ed950f33bf549370'
     },
     {
       companyName: "Creative Minds Agency",
@@ -21,7 +22,8 @@ let sampleData=[
       stipend: 5000,
       deadline:"2024-09-29",
       requirements: "Knowledge of Photoshop and Illustrator",
-      contactEmail: "careers@creativeminds.com"
+      contactEmail: "careers@creativeminds.com",
+      owner:'67069f2cd0c2c9da5c305e58',
     },
     {
       companyName: "Eco Solutions",
@@ -33,7 +35,8 @@ let sampleData=[
       stipend: 0,
       deadline:"2024-09-29",
       requirements: "Background in environmental science and data analysis",
-      contactEmail: "interns@ecosolutions.org"
+      contactEmail: "interns@ecosolutions.org",
+      owner:'67069f2cd0c2c9da5c305e58',
     },
     {
       companyName: "Fintech Hub",
@@ -45,7 +48,9 @@ let sampleData=[
       stipend: 8000,
       deadline:"2024-09-29",
       requirements: "Experience with Python, SQL, and Excel",
-      contactEmail: "info@fintechhub.com"
+      contactEmail: "info@fintechhub.com",
+      owner:'67069f2cd0c2c9da5c305e58',
+
     },
     {
       companyName: "HealthTech Labs",
@@ -57,7 +62,8 @@ let sampleData=[
       stipend: 7500,
       deadline:"2024-09-29",
       requirements: "Experience with Figma and user research",
-      contactEmail: "recruitment@healthtechlabs.com"
+      contactEmail: "recruitment@healthtechlabs.com",
+      owner:'670744d5ed950f33bf549370',
     },
     {
       companyName: "EduNation",
@@ -69,7 +75,9 @@ let sampleData=[
       stipend: 3000,
       deadline:"2024-09-29",
       requirements: "Excellent writing skills and knowledge of SEO",
-      contactEmail: "editorial@edunation.com"
+      contactEmail: "editorial@edunation.com",
+      owner:'67069f2cd0c2c9da5c305e58',
+
     },
     {
       companyName: "Alpha Robotics",
@@ -81,7 +89,8 @@ let sampleData=[
       stipend: 12000,
       deadline:"2024-09-29",
       requirements: "Knowledge of C++ and robotics engineering",
-      contactEmail: "internships@alpharobotics.com"
+      contactEmail: "internships@alpharobotics.com",
+      owner:'67069f2cd0c2c9da5c305e58',
     },
     {
       companyName: "Digital Marketing Pros",
@@ -93,7 +102,8 @@ let sampleData=[
       stipend: 6000,
       deadline:"2024-09-29",
       requirements: "Familiarity with social media platforms and analytics tools",
-      contactEmail: "marketing@digitalmarketingpros.com"
+      contactEmail: "marketing@digitalmarketingpros.com",
+      owner:'670744d5ed950f33bf549370',
     },
     {
       companyName: "Innovative Solutions",
@@ -105,7 +115,8 @@ let sampleData=[
       stipend: 4000,
       deadline:"2024-09-29",
       requirements: "Strong communication and business development skills",
-      contactEmail: "hr@innovativesolutions.com"
+      contactEmail: "hr@innovativesolutions.com",
+      owner:'67069f2cd0c2c9da5c305e58',
     },
     {
       companyName: "Smart Cities Co.",
@@ -117,7 +128,8 @@ let sampleData=[
       stipend: 5000,
       deadline:"2024-09-29",
       requirements: "Knowledge of GIS and urban planning concepts",
-      contactEmail: "careers@smartcitiesco.com"
+      contactEmail: "careers@smartcitiesco.com",
+      owner:'670665dc28750deb1c802370',
     },
     {
       companyName: "Digital Marketing Pros",
@@ -129,7 +141,8 @@ let sampleData=[
       stipend: 6000,
       deadline:"2024-09-29",
       requirements: "Familiarity with social media platforms and analytics tools",
-      contactEmail: "marketing@digitalmarketingpros.com"
+      contactEmail: "marketing@digitalmarketingpros.com",
+      owner:'670665dc28750deb1c802370',
     },
     {
       companyName: "HealthTech Labs",
@@ -141,7 +154,8 @@ let sampleData=[
       stipend: 7500,
       deadline:"2024-09-29",
       requirements: "Experience with Figma and user research",
-      contactEmail: "recruitment@healthtechlabs.com"
+      contactEmail: "recruitment@healthtechlabs.com",
+      owner:'670744d5ed950f33bf549370'
     }
 ]
 module.exports={data:sampleData};

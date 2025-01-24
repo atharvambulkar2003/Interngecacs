@@ -14,4 +14,4 @@ const intiData=async()=>{
     await Listing.insertMany(initData.data);
     console.log("Data was initialized");
 }
-intiData();
+intiData(); 

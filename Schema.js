@@ -13,3 +13,16 @@ module.exports.listingSchema=Joi.object({
         contactEmail:Joi.string().required(),
     }).required(),
 });
+module.exports.experienceSchema=Joi.object({
+    Experience:Joi.object({
+        comment:Joi.string().required(),
+    }).required(),
+});
+module.exports.applicantSchema=Joi.object({
+    applicant:Joi.object({
+        applicantName:Joi.string().required(),
+        applicantEmail:Joi.string().required(),
+        resume:Joi.string().required(),
+        dateApplied:Joi.date().required()
+    }).required(),
+})

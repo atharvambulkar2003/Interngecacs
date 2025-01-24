@@ -1,5 +1,6 @@
 const mongoose=require("mongoose");
 const Schema=mongoose.Schema;
+const Experience = require("./experience.js");
 
 const listingSchema=new Schema({
     companyName:{
@@ -42,6 +43,21 @@ const listingSchema=new Schema({
         type:String,
         required:true
     },
+    experience:[{
+        type:Schema.Types.ObjectId,
+        ref:"Experience",
+    }],
+    owner:{
+        type:Schema.Types.ObjectId,
+        ref:"User",
+    }
+});
+listingSchema.post("findOneAndDelete",async(listing)=>{
+    if(listing){
+        console.log(listing);
+        await Experience.deleteMany({_id:{$in:listing.experience}});
+        console.log("Deleted");
+    }
 });
 
 const Listing=mongoose.model("Listing",listingSchema);
